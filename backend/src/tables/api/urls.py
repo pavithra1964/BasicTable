@@ -1,9 +1,6 @@
-from django.urls import path
+from tables.api.views import TableViewSet
+from rest_framework.routers import DefaultRouter
 
-from .views import TableListView, TableDetailView
-
-
-urlpatterns = [
-    path('', TableListView.as_view()),
-    path('<pk>', TableDetailView.as_view())
-]
+router = DefaultRouter()
+router.register(r'', TableViewSet, basename='tables')
+urlpatterns = router.urls

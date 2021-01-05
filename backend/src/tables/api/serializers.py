@@ -6,4 +6,5 @@ from tables.models import Table
 class TableSerializer(serializers.ModelSerializer):
     class Meta:
         model = Table
-        fields = ('Stu_Name', 'Physics', 'Chemistry', 'Maths', 'Com_Science')
+        fields = ('id', 'Stu_Name', 'Physics',
+                  'Chemistry', 'Maths', 'Com_Science')

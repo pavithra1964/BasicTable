@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Table(models.Model):
-    Stu_Name = models.CharField(max_length=50)
+    Stu_Name = models.CharField(max_length=120)
     Physics = models.IntegerField()
     Chemistry = models.IntegerField()
     Maths = models.IntegerField()

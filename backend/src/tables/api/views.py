@@ -1,14 +1,9 @@
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework import viewsets
 
 from tables.models import Table
 from .serializers import TableSerializer
 
 
-class TableListView(ListAPIView):
-    queryset = Table.objects.all()
+class TableViewSet(viewsets.ModelViewSet):
     serializer_class = TableSerializer
-
-
-class TableDetailView(RetrieveAPIView):
     queryset = Table.objects.all()
-    serializer_class = TableSerializer
